@@ -22,7 +22,7 @@ I propose the following design which I will then optimize later.
 
 A long rod is pinned in the bottom left corner and extends to the right side of the box. On the right end of the rod is the mass. The linear actuator is pinned to the bottom of the box at a certain horizontal location x_l. The other end of the linear actuator is pinned to the rod at a position x_r units along the rod. Below is a drawing of the setup.
 
-![Rough drawing of mechanism]({{ "/assets/images/linear_actuator/mech_1.jpg" | relative_url }}){: .inline-image-l}
+![Rough drawing of mechanism]({{ "assets/images/linear_actuator/mech_1.png" | relative_url }})
 
 ### 2.1) Assumptions
 - Rod is assumed to be stiff
