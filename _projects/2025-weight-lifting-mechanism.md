@@ -99,11 +99,11 @@ L_ret: 0.0762
 L_ext: 0.3048
 F_max: 1.45 kN
 
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA22/22_1.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA22/22_2.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA22/22_3.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA22/22_4.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA22/22_5.png" | relative_url }}){: .inline-image-l}
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA22/22_1.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA22/22_2.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA22/22_3.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA22/22_4.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA22/22_5.png" | relative_url }})
 
 From inspection of the graphs, the optimal combination is:
 x_0 = 1.5
@@ -115,11 +115,11 @@ L_ret: 0.0762
 L_ext: 0.4572
 F_max: 11.34 kN
 
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA33/33_1.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA33/33_2.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA33/33_3.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA33/33_4.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA33/33_5.png" | relative_url }}){: .inline-image-l}
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA33/33_1.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA33/33_2.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA33/33_3.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA33/33_4.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA33/33_5.png" | relative_url }})
 
 From inspection of the graphs, the optimal combination is:
 x_0 = 1.5
@@ -131,11 +131,11 @@ L_ret: 0.1524
 L_ext: 0.4572
 F_max: 18.46 kN
 
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA44/44_1.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA44/44_2.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA44/44_3.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA44/44_4.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA44/44_5.png" | relative_url }}){: .inline-image-l}
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA44/44_1.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA44/44_2.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA44/44_3.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA44/44_4.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA44/44_5.png" | relative_url }})
 
 From inspection of the graphs, the optimal combination is:
 x_0 = 1.5
@@ -147,11 +147,11 @@ L_ret: 0.1524
 L_ext: 0.4572
 F_max: 35.81 kN
 
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA55/55_1.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA55/55_2.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA55/55_3.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA55/55_4.png" | relative_url }}){: .inline-image-l}
-![Desmos Plot]({{ "assets/images/linear_actuator/IMA55/55_5.png" | relative_url }}){: .inline-image-l}
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA55/55_1.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA55/55_2.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA55/55_3.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA55/55_4.png" | relative_url }})
+![Desmos Plot]({{ "assets/images/linear_actuator/IMA55/55_5.png" | relative_url }})
 
 From inspection of the graphs, the optimal combination is:
 x_0 = 1.5
