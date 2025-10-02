@@ -3,7 +3,7 @@ layout: project
 title: Weight Lifting Mechanism
 description: In-Class Assignment for Statics
 technologies: [Pencil and Paper]
-image: /assets/images/radio-machine-cad.jpg
+image: /assets/images/linear_actuator/tolo.png
 ---
 
 # Overview
