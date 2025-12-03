@@ -12,10 +12,16 @@ In ENGRD 2020, we were asked to come up with a design for the following prompt:
 
 *Given a 2D design space of 150cm long and 50cm tall, a rigid bar of a fixed length (your choice), 3 pin supports of which two need to be mounted on the ground and a linear actuator (pick from this [online](https://www.tolomatic.com/wp-content/uploads/2022/05/2700-4000_29_IMA_cat.pdf) catalog, use max force values only), design a frame/mechanism to lift the maximum possible weight to the highest possible height. Assume all the supports and bar/actuator are rigid.*
 
+### The problem
+The problem statement, exactly as given by the statics homework, is stated above. It is a realtively open ended problem, asking us to design a custom component in concert with a selected actuator to solve a given task.
+
 ## 1) Establishing a Metric
 This problem asks us to lift the maximum possible weight to the maximum possible height. These are two seperate variables, so to judge the performance of a certain design, we need a unified metrix which takes both of these in to account.
 
 I propose we use gravitational potential energy, mgh, which is proportional to both height and mass of the lifted object (multiplied by ~10). This favors height and mass equally (i.e. lifting a mass to a height is the same as lifting double the mass half as high). It also has a real, physical meaning (work done on object) which could be used for future problems. 
+
+### The Objective
+Put directly, the objective is to maximize this metric (specifically the gravitational potential energy).
 
 ## 2) Rough Proposed Deisgn 
 I propose the following design which I will then optimize later.
@@ -169,3 +175,65 @@ Therefore, we can conclude that the optimal setup to maximize change in gravitat
 
 Pin a rod of length 1.5077m in the bottom left corner of the box, with a mass of 3884 kg on the far right end. Pin the IMA55 RN05 linear actuator to the bottom right corner, joining it to the rod with another pin such that the linear actuator is 92.5 degrees from the ground (CCW).
 
+Below is a drawing of my proposed design
+
+![Final drawing]({{ "assets/images/linear_actuator/final_drawing_1.png" | relative_url }})
+
+### Revisiting my original static analysis
+The static analysis I used to determine my final design was based around a moment balance on the beam. Specifically, I used a sum of moments about the bottom left pin and set that equal to 0. This assumes quasi-static movement of the mass and beam (meaning the inertia of the beam and mass is irrelevant). The static analysis I performed does not take into account beam deformation, or any friction that might occur within the pins from the large load. 
+
+The dynamics of the linear actuator was also simplified according to the prompt. This simplification was predomanintly assuming that the actuator could exhibit maximum force across its entire stroke. The actuator was also assumed to be perfectly rigid (like the beam).
+
+# Assume the bar is no longer rigid (step 2)
+*All work below occured after December 3, when we were asked to revise our original work*
+
+Below is a CAD sketch of the original setup. This CAD sketch allows me to easily measure certain geometric properties of the setup that I didn't directly calculate:
+![CAD sketch]({{ "assets/images/linear_actuator/cad_sketch_1.png" | relative_url }})
+
+From this CAD setup, I drew an FBD of the original setup:
+![FBD original]({{ "assets/images/linear_actuator/FBD_original.png" | relative_url }})
+
+The prompt tells us only to consider transverse components, so I can redraw this beam FBD as the following simplified FBD. Because the beam is static, I can model the lower left pin and the linear actuator as simple supports. The mass at the end of the beam acts like a force directly downwards, with a magnitude equal to the transverse force of gravity:
+![FBD image]({{ "assets/images/linear_actuator/c3.png" | relative_url }})
+
+This is an overhanging beam with an end point load, whose loading can be found in standard beam bending tables. Because the overhang is short, the maximum deflection occurs between the supports:
+
+δ_max = (sqrt(3) * P * a * L^2)/(27 * E * I)
+
+where L is the distance between the two supports, a is the length of the overhang, P is the point load at the overhang tip, E is the youngs modulus, and I is the moment of inertia of the beam. 
+
+## Maximum deflection of your beam
+The original problem stated the beam was rigid, so we never had to come up with a beam design. Therefore, for my original beam, I'll assume it was a solid rod of steel (E=200 GPA) with a diameter of 20cm. Therefore, it has a moment of inertia of pi*(0.2)^4/64 = 78.539*10^-6 m^2.
+
+Plugging everything in gives a maximum deflection of 2.059 um. See the screenshot below of desmos calculation
+![FBD image]({{ "assets/images/linear_actuator/c4.png" | relative_url }})
+
+## New Beam Design to Minimize Deflection
+First, let's rearrange the maximum deflection equation for I.
+
+I = (sqrt(3) * P * a * L^2)/(27 * E * δ_max)
+
+Next, lets calculate the maximum allowed vertical deflection. 2% of the length is 
+
+0.02*1.507 = 0.03014 m
+
+We know the most mass efficient beam design is a single vertical web with infinetsimal thickness. Of course, this is physically impossible. Therefore, let's impose a minimum thickness of 0.001 m (1 mm). Therefore, the inertia is:
+
+I = bh^3/12 
+
+Therefore, we can set this equal to the equation for inertia above and solve for height.
+
+bh^3/12 = (sqrt(3) * P * a * L^2)/(27 * E * δ_max)
+
+h^3 = 12/b * (sqrt(3) * P * a * L^2)/(27 * E * δ_max)
+
+h = [12/b * (sqrt(3) * P * a * L^2)/(27 * E * δ_max)]^(1/3)
+
+Plugging everything in gives 0.04001 meters, or 4.00 cm. See the desmos screenshot below.
+
+![FBD image]({{ "assets/images/linear_actuator/c5.png" | relative_url }})
+
+## Final Beam Design
+The final beam is 1.507 meters long, by 1mm wide, by 4.00 cm tall. It is made of steel with a youngs modulus of 200 GPa. Below is a drawing of the beam:
+
+![FBD image]({{ "assets/images/linear_actuator/c6.png" | relative_url }})
